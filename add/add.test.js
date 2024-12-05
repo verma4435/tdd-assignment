@@ -16,4 +16,5 @@ describe("add function test", () => {
         () => expect(() => add("1,2,3,-4,-5"))
             .toThrow("negative numbers not allowed -4,-5")
     )
+    test("input with delimiter as ; //;\n1;2", () => expect(add("//;\n1;2")).toEqual(3));
 });
