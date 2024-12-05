@@ -17,4 +17,7 @@ describe("add function test", () => {
             .toThrow("negative numbers not allowed -4,-5")
     )
     test("input with delimiter as ; //;\n1;2", () => expect(add("//;\n1;2")).toEqual(3));
+    test("input bigger than 1000 are 1,1001", () => expect(add("1,1001")).toEqual(1));
+    test("input for longer delimiter //[***]\n1***2***3", () => expect(add("//[***]\n1***2***3")).toEqual(6));
+    
 });
