@@ -2,7 +2,10 @@ exports.add = function (numStr) {
     if (!numStr) {
         return 0;
     }
-    const sum = 0;
-    const number = Number(numStr);
-    return sum + number;
+    let sum = 0;
+    const numberArr = numStr.split(',').map(n => Number(n));
+    for (const num of numberArr) {
+        sum += num;
+    }
+    return sum;
 }
